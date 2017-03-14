@@ -1,15 +1,14 @@
 import React from 'react';
 import './header-style';
 
-const logStuff = () => {
-  console.log("I was clicked!")
-}
-
-const Header = () => {
+const Header = ({data}) => {
   return (
     <div className="Header">
-      <h1>Header</h1>
-      <button onClick={() => logStuff()} className="important-button">Click Me</button>
+      <h1>SWAPI-Box</h1>
+      <p>{data.text}
+      <span>{data.film}</span>
+      <span>{data.releaseDate}</span>
+    </p>
     </div>
   );
 }
