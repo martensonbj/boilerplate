@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "webpack-dev-server -d --watch",
+    "start": "webpack-dev-server",
     "test": "mocha -w --compilers js:babel-core/register --require helpers/browser.js app/**/*.spec.js "
   },
   "author": "",

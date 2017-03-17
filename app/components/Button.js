@@ -1,12 +1,15 @@
 import React from 'react';
 
-const Button = (props) => {
+const Button = ({handleClick, type, active}) => {
+  // const style = active ? { backgroundColor: "#fff" } : { backgroundColor: "rgba(23, 33, 43, 0.75)" }
+  const buttonStyle = `${type} category-button `
   return (
     <button
-      className={props.type}
-      onClick={() => props.handleClick(props.type)}
+      // style={ style }
+      className={ buttonStyle }
+      onClick={() => handleClick(type)}
     >
-      {props.type}
+      {type}
     </button>
   )
 }

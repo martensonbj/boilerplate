@@ -30,11 +30,17 @@ export default class Person extends Component {
     console.log("Favorited ", name);
   }
 
+  expandCard() {
+    this.setState({ toggleCard: !this.state.toggleCard})
+  }
+
   render() {
     return (
-      <div className="Person">
-        <p className="person-name">{this.state.name}</p>
-        <button onClick={ () => this.favoritePerson(this.state.name) }> Favorite </button>
+      <div className="Person" onClick={(e) => this.expandCard(e)}>
+        <div className="person-header">
+          <p className="person-name">{this.state.name}</p>
+          <button onClick={ () => this.favoritePerson(this.state.name) }> Favorite </button>
+        </div>
         <div className="person-details">
           <p className="person-homeworld">{this.state.homeworld}</p>
           <p className="person-species">{this.state.species}</p>

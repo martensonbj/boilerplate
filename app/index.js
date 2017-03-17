@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { render } from 'react-dom'
 import './styles';
 
-import Header from './components/Header/Header'
+import Sidebar from './components/Sidebar/Sidebar'
 import Button from './components/Button'
 import Content from './components/Content'
 
@@ -34,13 +34,17 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header data={ {text: this.state.text, film: this.state.film, releaseDate: this.state.releaseDate} }/>
-        <h2>Choose A Category</h2>
-        <Button type="people" handleClick={ (target) => this.getData(target) }/>
-        <Button type="planets" handleClick={(target) => this.getData(target) }/>
-        <Button type="species" handleClick={ (target) => this.getData(target) }/>
+        <section className="main">
+          <Sidebar data={ {text: this.state.text, film: this.state.film, releaseDate: this.state.releaseDate} }/>
+          <section className="display">
+            <h1 className="header">SWAPI-Box</h1>
+            <Button type="people" handleClick={ (target) => this.getData(target)} active={"people" === this.state.selectedCategory }/>
+            <Button type="planets" handleClick={(target) => this.getData(target)} active={"planets" === this.state.selectedCategory }/>
+            <Button type="species" handleClick={ (target) => this.getData(target)} active={"species" === this.state.selectedCategory }/>
 
-        <Content selectedContent={ this.state.selectedContent } selectedCategory={ this.state.selectedCategory }/>
+            <Content selectedContent={ this.state.selectedContent } selectedCategory={ this.state.selectedCategory }/>
+          </section>
+        </section>
       </div>
     );
   }

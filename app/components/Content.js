@@ -38,7 +38,7 @@ export default class Content extends Component {
     return (
       <section className="Content">
         <h2 className="category">{ this.props.selectedCategory }</h2>
-        <div>
+        <div className="content-cards">
           { filterCategories(this.props.selectedCategory )}
         </div>
       </section>

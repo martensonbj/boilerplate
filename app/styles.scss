@@ -1,7 +1,112 @@
-$main-background: #f4f4f4;
+$main-background: #e2edff;
 
 body {
   background: $main-background;
-  color: teal;
+  color: #000;
   font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  display: flex;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 100;
+    font-size: 40px;
+    margin-top: 0px;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 10px;
+}
+
+.Sidebar {
+  flex: 1;
+  padding: 15px;
+  height: 100vh;
+  background-color: #17212b;
+  color: #f4f4f4;
+}
+
+.display {
+    flex: 3;
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar-details .sidebar-title {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.sidebar-details .sidebar-date {
+  font-size: 16px;
+  font-weight: 100;
+  padding: 0;
+  margin: 0;
+}
+
+.Content {
+    min-height: 300px;
+    background: #17212b;
+    margin: 0 auto;
+    align-items: center;
+    margin-top: 25px;
+    color: #e2edff;
+    font-weight: 100;
+}
+
+.category-button {
+    outline: none;
+    border: none;
+    width: 120px;
+    padding: 10px;
+    margin: 0 30px;
+    background: rgba(23, 33, 43, 0.75);
+    color: #e2edff;
+    font-size: 14px;
+    text-shadow: none;
+    font-weight: 100;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: 0.4s all;
+}
+
+.category-button:hover {
+  background: rgba(23, 33, 43, 1);
+  color: white;
+}
+
+.content-cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.Person {
+    width: 200px;
+    background: rgba(255,255,255,0.4);
+    margin: 8px 0;
+    cursor: pointer;
+    transition: 0.4s all;
+}
+
+.Person:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.person-header {
+  display:flex;
+  border-bottom: 1px dotted #fff;
+}
+
+.person-header button {
+  flex: 1
+}
+
+p.person-name {
+    flex: 4
 }
