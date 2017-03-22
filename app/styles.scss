@@ -86,7 +86,7 @@ h1 {
     justify-content: space-around;
 }
 
-.Person {
+.card {
     width: 200px;
     background: rgba(255,255,255,0.4);
     margin: 8px 0;
@@ -94,19 +94,50 @@ h1 {
     transition: 0.4s all;
 }
 
-.Person:hover {
+.card:hover {
   background: rgba(255,255,255,0.2);
 }
 
-.person-header {
+.card-header {
   display:flex;
   border-bottom: 1px dotted #fff;
 }
 
-.person-header button {
+.card-header button {
   flex: 1
 }
 
-p.person-name {
+p.card-name {
     flex: 4
+}
+
+.view-favorites {
+    border: none;
+    background: #fff;
+    padding: 10px;
+}
+
+.card-header button {
+    flex: 1;
+    font-size: 30px;
+    color: #7dacad;
+    background: #4a5460;
+    border: none;
+    cursor: pointer;
+}
+
+.card-header button:hover {
+  color: yellow;
+}
+
+.view-favorites {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+}
+
+.view-favorites span {
+  padding: 5px 7px;
+  background: #17212b;
+  color: white;
 }

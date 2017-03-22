@@ -26,26 +26,18 @@ export default class Person extends Component {
     .then(json => this.setState({ species: json.name, language: json.language }))
   }
 
-  favoritePerson(name) {
-    console.log("Favorited ", name);
-  }
-
-  expandCard() {
-    this.setState({ toggleCard: !this.state.toggleCard})
-  }
-
   render() {
     return (
-      <div className="Person" onClick={(e) => this.expandCard(e)}>
-        <div className="person-header">
-          <p className="person-name">{this.state.name}</p>
-          <button onClick={ () => this.favoritePerson(this.state.name) }> Favorite </button>
+      <div className="Person card">
+        <div className="card-header">
+          <p className="card-name">{this.state.name}</p>
+          <button onClick={ () => this.props.favorite() }>&#9733;</button>
         </div>
         <div className="person-details">
-          <p className="person-homeworld">{this.state.homeworld}</p>
-          <p className="person-species">{this.state.species}</p>
-          <p className="person-language">{this.state.language}</p>
-          <p className="person-population">1/{this.state.population}</p>
+          <p className="person-homeworld">Homeworld: {this.state.homeworld}</p>
+          <p className="person-species">Species: {this.state.species}</p>
+          <p className="person-language">Language: {this.state.language}</p>
+          <p className="person-population">Population: {this.state.population}</p>
         </div>
       </div>
     )

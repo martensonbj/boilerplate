@@ -4,7 +4,7 @@ import './sidebar-style';
 const Sidebar = ({data}) => {
   return (
     <div className="Sidebar">
-      <p>{data.text}</p>
+      <pre>{data.text}</pre>
 
       <div className="sidebar-details">
         <p className="sidebar-title">{data.film}</p>
